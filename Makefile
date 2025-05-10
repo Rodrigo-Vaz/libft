@@ -6,7 +6,7 @@
 #    By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/08 18:37:01 by rolucas-          #+#    #+#              #
-#    Updated: 2025/05/09 18:47:51 by rolucas-         ###   ########.fr        #
+#    Updated: 2025/05/10 17:48:45 by rolucas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ RM = rm -f
 NAME = libft.a
 
 # Arquivos fonte
-SRC = ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcat.c ft_strlcpy.c
+SRC = ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcat.c ft_strlcpy.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c
 
 OBJ = $(SRC:.c=.o)
 
