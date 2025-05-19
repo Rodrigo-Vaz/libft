@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 20:58:46 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:12:55 by rolucas-         ###   ########.fr       */
+/*   Created: 2025/05/19 17:02:48 by rolucas-          #+#    #+#             */
+/*   Updated: 2025/05/19 22:12:07 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*ptr;
+	unsigned int	i;
 
-	ptr = (unsigned char *)s;
-	while (len--)
+	i = 0;
+	while (s[i])
 	{
-		*ptr++ = 0;
+		f(i, &s[i]);
+		i++;
 	}
 }
-// int main(void)
+// void ft_touppertest(unsigned int x, char *c)
 // {
-//     char str[10] = "Hello!";
+//     (void)x;
+//     if (*c >= 'a' && *c <= 'z')
+//         *c -= 32;
+//     else
+//         *c = *c;
+// }
+// int main()
+// {
+//     char str[] = "abcde";
 
-//     ft_bzero(str, 10);
-
-//     printf("Conteudo de str apos bzero: '%s'\n", str);
-
-//     return 0;
+//     ft_striteri(str, ft_touppertest);
+//     printf("%s", str);
 // }

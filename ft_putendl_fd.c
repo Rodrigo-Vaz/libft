@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 20:58:46 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:12:55 by rolucas-         ###   ########.fr       */
+/*   Created: 2025/05/19 17:59:17 by rolucas-          #+#    #+#             */
+/*   Updated: 2025/05/19 21:26:39 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned char	*ptr;
+	int	i;
 
-	ptr = (unsigned char *)s;
-	while (len--)
-	{
-		*ptr++ = 0;
-	}
+	i = 0;
+	while (s[i])
+		write(fd, &s[i++], 1);
+	write(fd, "\n", 1);
 }
-// int main(void)
+// #include <fcntl.h>
+
+// int main()
 // {
-//     char str[10] = "Hello!";
+//     int fd;
 
-//     ft_bzero(str, 10);
-
-//     printf("Conteudo de str apos bzero: '%s'\n", str);
-
+//     fd = open("/dev/pts/1", O_WRONLY);   
+//     ft_putendl_fd("STRING", fd);
 //     return 0;
 // }

@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 19:35:37 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/18 20:47:10 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 22:09:02 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ char	**ft_split(char const *s, char c)
 	lst[i] = NULL;
 	return (lst);
 }
-
 // void print_split_result(char **arr)
 // {
 //     int i = 0;

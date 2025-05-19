@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 16:18:51 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/18 17:54:10 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 22:15:57 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-    size_t  total;
-    size_t  i;
-    unsigned char   *ptr;
+	size_t			total;
+	size_t			i;
+	unsigned char	*ptr;
 
-    total = count * size;
-    ptr = (unsigned char *) malloc(total);
-    if (!ptr)
-        return (NULL);
-    i = 0;
-    while (i < total)
-        ptr[i++] = 0;
-    return ((void *)ptr);
+	total = count * size;
+	ptr = (unsigned char *) malloc(total);
+	if (!ptr)
+		return (NULL);
+	i = 0;
+	while (i < total)
+		ptr[i++] = 0;
+	return ((void *)ptr);
 }
 
 // int main(void)

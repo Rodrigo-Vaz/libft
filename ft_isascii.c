@@ -6,17 +6,17 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:03:39 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/08 19:18:38 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 21:57:13 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if ((c >= 0 && c <= 127))
-        return (1);
-    return (0);
+	if ((c >= 0 && c <= 127))
+		return (1);
+	return (0);
 }
 // int main(void)
 // {

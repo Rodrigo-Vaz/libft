@@ -6,26 +6,29 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 21:07:27 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/09 15:21:51 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 21:55:32 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    unsigned char *d = dest;
-    const unsigned char *s = src;
-    int i = 0;
-    
-    while (n--)
-    {
-        d[i] = s[i];
-        i++;
-    }
+	unsigned char		*d;
+	const unsigned char	*s;
+	int					i;
 
-    return dest;
+	i = 0;
+	d = dest;
+	s = src;
+	while (n--)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }
+
 // int main(void)
 // {
 //     char src[] = "Ola Mundo!";

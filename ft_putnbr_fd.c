@@ -1,34 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/08 20:58:46 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:12:55 by rolucas-         ###   ########.fr       */
+/*   Created: 2025/05/19 18:13:04 by rolucas-          #+#    #+#             */
+/*   Updated: 2025/05/19 21:24:39 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (len--)
+	if (n == -2147483648)
 	{
-		*ptr++ = 0;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
+	if (n < 0 && n != -2147483648)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	while (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		n = n % 10;
+	}
+	if (n < 10)
+	{
+		n = n + 48;
+	}
+	write(fd, &n, 1);
 }
-// int main(void)
+// #include <fcntl.h>
+
+// int main()
 // {
-//     char str[10] = "Hello!";
+//     int fd;
 
-//     ft_bzero(str, 10);
-
-//     printf("Conteudo de str apos bzero: '%s'\n", str);
-
+//     fd = open("/dev/pts/1", O_WRONLY);   
+//     ft_putnbr_fd(-2147483648, fd);
 //     return 0;
 // }

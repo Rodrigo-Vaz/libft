@@ -6,17 +6,17 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:20:18 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/08 19:35:31 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/19 21:56:45 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if ((c >= 33 && c <= 126))
-        return (1);
-    return (0);
+	if ((c >= 33 && c <= 126))
+		return (1);
+	return (0);
 }
 // int main(void)
 // {
