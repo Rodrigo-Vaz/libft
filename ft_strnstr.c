@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 15:17:47 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 18:33:45 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 15:12:58 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
 // int main()
 // {
 // 	const char big[] = "Casa, Apartamento, Fazenda";
-// 	const char little[] = "Apartamento";
-//     size_t len = 50;
+// 	const char little[] = "Casa";
+//     size_t len = 5;
 
 // 	char *result2 = ft_strnstr(big, little, len);
 // 	printf("funcao criada %s", result2);

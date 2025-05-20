@@ -6,19 +6,21 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 16:19:14 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 20:51:12 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 16:42:28 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < size)
+	if (!size)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < size - 1)
 	{
 		dest[i] = src[i];
 		i++;
@@ -41,13 +43,6 @@ unsigned int	ft_strlcpy(char *dest, const char *src, size_t size)
 //     printf("Destino (copiado)...: \"%s\"\n", destino);
 //     printf("Tamanho necessário..: %zu\n", tamanho_necessario);
 //     printf("Tamanho do buffer...: %zu\n", tam_buffer);
-
-//     // Verifica se houve truncamento
-//     if (tamanho_necessario >= tam_buffer) {
-//         printf("⚠️ Atenção: string foi truncada!\n");
-//     } else {
-//         printf("✅ String copiada sem truncamento.\n");
-//     }
 
 //     return 0;
 // }

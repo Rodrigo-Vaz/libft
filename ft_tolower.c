@@ -6,13 +6,13 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 16:02:38 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:58:38 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 15:56:18 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	to_lower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c += 32);

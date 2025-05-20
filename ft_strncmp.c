@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:09:23 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:58:01 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 15:02:52 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // int main()
 // {
 //     char *src1 = "Hello V";
-//     char *src2 = "Hello Wordl";
+//     char *src2 = "Hello World";
 //     unsigned int size = 10;
 //     int result;
 

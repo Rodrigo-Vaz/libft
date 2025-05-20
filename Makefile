@@ -6,14 +6,14 @@
 #    By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/08 18:37:01 by rolucas-          #+#    #+#              #
-#    Updated: 2025/05/19 18:18:56 by rolucas-         ###   ########.fr        #
+#    Updated: 2025/05/20 16:36:04 by rolucas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Compilador e flags
 CC = cc
 
-CFLAG = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g
 
 #Comando para remover
 RM = rm -f	
@@ -30,19 +30,15 @@ all: $(NAME)
 
 # Regra para criar a biblioteca
 $(NAME): $(OBJ)
-	@ar crs $(NAME) $(OBJ)
-	
-# Regra para compilar os .c em .o
-%.o: %.c
-	@$(CC) $(CFLAG) -c $< -o $@
+	ar crs $(NAME) $(OBJ)
 
 # Limpa os .o
 clean:
-	@$(RM) $(OBJ)
+	$(RM) $(OBJ)
 
 # Limpa tudo (objeto + biblioteca)
 fclean: clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 # Recompila do zero
 re: fclean all

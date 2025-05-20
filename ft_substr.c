@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 18:31:14 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:47:48 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 16:50:13 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = start;
 	j = 0;
+	if (start >= len)
+		return 
 	nstr = (char *)malloc(len + 1);
 	if (!s || !nstr)
-		return (0);
+		return (free(nstr), NULL);
 	while (i < ft_strlen(s) && j < len)
 	{
 		nstr[j++] = s[i++];

@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 22:34:48 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 14:17:37 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 16:00:55 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
 size_t			ft_strlen(const char *str);
-unsigned int	ft_strlcpy(char *dest, const char *src, size_t size);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+size_t			ft_strlcpy(char *dest, const char *src, size_t size);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
 void			*ft_memset(void *str, int val, size_t len);
 void			ft_bzero(void *s, size_t len);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
-int				to_upper(int c);
-int				to_lower(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);

@@ -6,12 +6,11 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 19:35:37 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 14:48:22 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 16:01:15 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static size_t	ft_countword(char const *s, char c)
 {
