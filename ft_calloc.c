@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 16:18:51 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 22:15:57 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 14:25:27 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*ptr;
 
 	total = count * size;
-	ptr = (unsigned char *) malloc(total);
+	ptr = (unsigned char *)malloc(total);
 	if (!ptr)
 		return (NULL);
 	i = 0;

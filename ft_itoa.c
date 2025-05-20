@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 20:47:48 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:44:23 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 14:20:37 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,13 @@ char	*ft_itoa(int n)
 	int		i;
 	char	*str;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	i = nbnb(n);
 	str = malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
 	str[i--] = '\0';
-	if (n == '0')
-	{
-		return (NULL);
-	}
 	if (n < 0)
 	{
 		str[0] = '-';

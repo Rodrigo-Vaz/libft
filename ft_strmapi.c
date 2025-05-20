@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 14:19:08 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:30:49 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 14:19:27 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	str = (char *)malloc(ft_strlen(s) + 1);
 	if (!str)
 		return (NULL);
