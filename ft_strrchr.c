@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 16:44:56 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 15:55:13 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 19:58:36 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,19 @@ char	*ft_strrchr(const char *s, int c)
 	ini = s;
 	i = ft_strlen(s);
 	s = (s + i);
-	while (*s != *ini && c != *s)
+	while (s != ini && (char)c != *s)
 		s--;
-	if (c == *s)
+	if ((char)c == *s)
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
+
 // int main()
 // {
-//		const char *str = "abcabc";
-//		char find = 'b';
-
-//		char *result = ft_strrchr(str, find);
-
-//		if (result)
-//		printf("caractere '%c' encontrado em: \"%s\"\n", find, result);
-//		else
-//		printf("Caractere '%c' nao encontrado. \n", find);
-
-//		return 0;
+// 		const char *str = "pepe y cparlop";
+// 		//char find = 'c';
+// 		char *result = ft_strrchr(str, 99);
+// 		char *result2 = strrchr(str, 99);
+// 		printf("%s\n", result);
+// 		printf("%s\n", result2);
 // }

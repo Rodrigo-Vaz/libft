@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:30:54 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 22:08:16 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/20 20:10:49 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write (fd, &c, 2);
+	write (fd, &c, 1);
 }
 // #include <fcntl.h>
 

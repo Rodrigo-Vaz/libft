@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 18:51:30 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 14:19:07 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/21 20:49:08 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	nstr = (char *)malloc(ft_strlen(s1) + ft_strlen(s2));
+	nstr = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!s1 || !s2 || !nstr)
 		return (NULL);
 	while (s1[i] != '\0')
@@ -33,8 +33,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j] != '\0')
 	{
 		nstr[i++] = s2[j++];
-		nstr[i] = '\0';
 	}
+	nstr[i] = '\0';
 	return (nstr);
 }
 // int	main()

@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 16:09:25 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 20:57:08 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/21 20:46:10 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && c != *s)
+	while (*s != '\0' && (char)c != *s)
 		s++;
-	if (c == *s)
+	if ((char)c == *s)
 		return ((char *)s);
 	return (0);
 }

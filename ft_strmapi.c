@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 14:19:08 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 14:19:27 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/21 20:51:29 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 

@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:09:23 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 15:02:52 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/21 20:54:24 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
 		if (s1[i] < s2[i] || s1[i] > s2[i])
-			return (s1[i] - s2[i]);
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);
@@ -32,8 +32,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 //     unsigned int size = 10;
 //     int result;
 
-//     result = ft_strncmp(src1, src2, size);
+//     // result = ft_strncmp(NULL, NULL, size);
 
-//     printf("%d", result);
-//     printf("%d", strncmp (src1, src2, size));
+//     // printf("%d", result);
+//     printf("%d", strncmp (NULL, NULL, size));
 // }

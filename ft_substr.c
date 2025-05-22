@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 18:31:14 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 16:50:13 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 19:38:31 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,35 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+	{
+		start = ft_strlen(s);
+		len = 0;
+	}
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	nstr = (char *)malloc(len + 1);
+	if (!nstr)
+		return (NULL);
 	i = start;
 	j = 0;
-	if (start >= len)
-		return 
-	nstr = (char *)malloc(len + 1);
-	if (!s || !nstr)
-		return (free(nstr), NULL);
 	while (i < ft_strlen(s) && j < len)
 	{
 		nstr[j++] = s[i++];
-		nstr[j] = '\0';
 	}
+	nstr[j] = '\0';
 	return (nstr);
 }
 
 // int main()
 // {
-//     const char *original = "Libft é incrível!";
+//     const char *original = "Libft e incrivel!";
 //     char *sub;
 
-//     // Exemplo: extrair 7 caracteres a partir da posição 6 ("é incrí")
-//     sub = ft_substr(original, 6, 7);
+//     // Exemplo: extrair 7 caracteres a partir da posição 6 ("e incri")
+//     sub = ft_substr("0123456789", 9, 10);
 
 //     if (!sub)
 //     {

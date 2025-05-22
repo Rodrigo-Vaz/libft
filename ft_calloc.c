@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/18 16:18:51 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/20 14:25:27 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 19:51:50 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	i = 0;
 	while (i < total)
-		ptr[i++] = 0;
+		ptr[i++] = '\0';
 	return ((void *)ptr);
 }
 

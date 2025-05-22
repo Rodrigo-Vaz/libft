@@ -6,7 +6,7 @@
 /*   By: rolucas- <rolucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 21:07:27 by rolucas-          #+#    #+#             */
-/*   Updated: 2025/05/19 21:55:32 by rolucas-         ###   ########.fr       */
+/*   Updated: 2025/05/22 19:42:58 by rolucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 // int main(void)
 // {
-//     char src[] = "Ola Mundo!";
-//     char dest[20];
+//     char src[] = "Ola mundo";
+//     char dest[10];
 
-//     ft_memcpy(dest, src, sizeof(src));
-
+//     memcpy(src, dest, sizeof(src));
 //     printf("Conteudo de dest: %s\n", dest);
 
 //     return 0;
